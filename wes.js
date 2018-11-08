@@ -1,17 +1,18 @@
 const Discord = require('discord.js');
-const A7MD = new Discord.Client();
+const client = new Discord.Client();
 
-console.log("BOT ONLINE");
- 
-A7MD.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-سلام عليكم 
-مكان راقي ندعوك له :sparkles:
-                               [ https://discord.gg/Q87rKBE ] 
-الدعووة خاصة لك ... [ ${member}  ]
-**`) 
-}).catch(console.error)
+client.on('ready', () => {
+console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
+client.on('ready', async() => {
+var server = "510103671313268772"; // ايدي السررفر
+var channel = "510128835895885834";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('يا خرا شنو هذا يا خرا شنو هذا يا خرا شنو هذا يا خرا شنو هذا يا خرا شنو هذا يا خرا شنو هذا يا خرا شنو هذا ')
+	},305);
 })
-A7MD.login(process.env.BOT_TOKEN);  //
+
+
+client.login("NTEwMTM4NTk0NzI0MjgyMzk4.DsYAZg.a2o11B3HuAZstO_7ccRROrCyXBw");//nor7mh.pride@gmail.com:nor7mhpride
